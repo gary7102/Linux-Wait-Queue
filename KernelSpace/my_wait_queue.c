@@ -73,7 +73,7 @@ static int clean_wait_queue(void)
         wake_up_process(node->task); // 喚醒進程
         kfree(node); // 釋放記憶體
   	
-	msleep(100);
+	msleep(100); // sleep 100 ms
     }
     spin_unlock(&queue_lock);
 
