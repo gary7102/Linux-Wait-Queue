@@ -11,16 +11,15 @@ void *enter_wait_queue(void *thread_id)
 {
 	pid_t tid = syscall(SYS_gettid); // get thread id
 	fprintf(stderr, "enter wait queue thread_id: %d, current thread id = %d\n", *(int *)thread_id, tid);	
-	int result;	// 
-	result = syscall(SYS_CALL_MY_WAIT_QUEUE, 1);
-	
+
+	syscall(SYS_CALL_MY_WAIT_QUEUE, 1);
+
 	fprintf(stderr, "exit wait queue thread_id: %d, current thread id = %d\n", *(int *)thread_id, tid);
 }
 void *clean_wait_queue()
 {
 
-	int result;	//
-	result = syscall(SYS_CALL_MY_WAIT_QUEUE, 2);
+	syscall(SYS_CALL_MY_WAIT_QUEUE, 2);
 }
 
 int main()
