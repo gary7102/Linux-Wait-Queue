@@ -63,6 +63,7 @@ static int enter_wait_queue(void)
 * 使用 `spin_lock` 保護`list_add_tail`，同時間只會有一個node 加入 `my_wait_queue` ，確保不會出現race condition。
 * 使用 `list_add_tail` 將節點加入queue尾部。
 * 設置process state為 `TASK_INTERRUPTIBLE`，並使用 `schedule()` 將當前process 設為睡眠，直到呼叫 `wake_up_process` 才可以離開wait queue。
+
 :::warning
 記得 `schedule();` 要加在spinlock之外，  
 否則在 critical region 中使用 `schedule();` 會使 process 占用 lock 不放，導致deadlock 發生
