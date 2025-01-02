@@ -337,7 +337,7 @@ int main()
 # Another implementation
 
 :::spoiler my_wait_queue.c
-```c=1
+```c
 #include <linux/sched.h>
 #include <linux/kernel.h>
 #include <linux/syscalls.h>
@@ -392,7 +392,7 @@ return 0;
 
 ## 全域、static變數初始化
 
-```c=6
+```c
 static int condition = 0;
 DECLARE_WAIT_QUEUE_HEAD(my_wait_queue);
 static DEFINE_MUTEX(my_wait_queue_lock);
@@ -405,7 +405,7 @@ static DEFINE_MUTEX(my_wait_queue_lock);
 `8：`DEFINE一個static的Mutex lock實例：`my_wait_queue_lock`。
 
 ## enter_wait_queue() 
-```c=9
+```c
 static int enter_wait_queue(void)
 {   
     condition = 0;
@@ -446,7 +446,7 @@ static int enter_wait_queue(void)
 
 
 ## clean_wait_queue()
-```c=27
+```c
 static int clean_wait_queue(void)
 {
     printk("start waking up process.");
@@ -491,4 +491,3 @@ static int clean_wait_queue(void)
 
 * [Waitqueue in Linux](https://embetronicx.com/tutorials/linux/device-drivers/waitqueue-in-linux-device-driver-tutorial/)
 * [bootlin](https://elixir.bootlin.com/linux/v5.15.137/source/include/linux/syscalls.h)
-* 
