@@ -4,7 +4,7 @@
 * Add a thread to the wait queue to wait. Remove threads from the wait queue, allowing them exit in **FIFO** order
 
 
-**Link :**  [Project_2](https://github.com/gary7102/Linux-Wait-Queue/blob/main/Project_2.pdf) , [github](https://github.com/gary7102/Linux-Wait-Queue/tree/main) , [hackmd](https://hackmd.io/@gary7102/SyBMtkdHkx)
+**Link :**  [Project2.pdf](https://github.com/gary7102/Linux-Wait-Queue/blob/main/Project_2.pdf) , [github](https://github.com/gary7102/Linux-Wait-Queue/tree/main) , [hackmd](https://hackmd.io/@gary7102/SyBMtkdHkx) , [DEMO](https://hackmd.io/@gary7102/SJrFJ2181l)
 
 <font size = 4>**Environment**</font>
 ```
